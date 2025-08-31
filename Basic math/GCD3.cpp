@@ -43,3 +43,14 @@ int main() {
 
     return 0;
 }
+// Eg, n1 = 20, n2 = 15:
+
+// gcd(20, 15) = gcd(20-15, 15) = gcd(5, 15)
+
+// gcd(5, 15) = gcd(15-5, 5) = gcd(10, 5)
+
+// gcd(10, 5) = gcd(10-5, 5) = gcd(5, 5)
+
+// gcd(5, 5) = gcd(5-5, 5) = gcd(0, 5)
+
+// Hence, return 5 as the gcd
