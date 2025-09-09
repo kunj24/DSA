@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
+    //hasing
     int n;
     int hash[13]={0};
     cout<<"Enter a no of element to insert :";
