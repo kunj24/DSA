@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
+    //hashing character
     string s;
     cout<<"Enter a string :";
     cin>>s;
