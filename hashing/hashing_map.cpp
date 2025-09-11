@@ -14,10 +14,14 @@ int main(){
     for(int i=0;i<n;i++){
         mpp[arr[i]]++;
     }
+    for(auto it : mpp){
+        cout<<it.first  <<" -> " <<it.second<<endl;
+    }
     int q;
     cout<<"Enter a number of character for quries :"<<endl;
     cin>>q;
     cout<<"Enter "<<q<< "number "<<endl;
+
     while(q--){
         int x;
         cin>>x;
