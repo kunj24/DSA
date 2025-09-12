@@ -1,0 +1,22 @@
+# Ignore C/C++ build outputs
+*.exe
+*.o
+*.obj
+*.out
+*.dll
+*.so
+*.a
+*.lib
+
+# Ignore build and IDE folders
+build/
+bin/
+.vscode/
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
