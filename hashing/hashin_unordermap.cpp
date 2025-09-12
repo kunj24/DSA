@@ -22,6 +22,25 @@ int main() {
     for(auto it : mpp) {
         cout << it.first << " -> " << it.second << endl;
     }
+    int maxFreq = 0, minFreq = n;
+    int maxEle = 0, minEle = 0;
+    
+    for (auto it : mpp) {
+        if (it.second > maxFreq) {
+            maxFreq = it.second;
+            maxEle = it.first;
+        }
+        if (it.second < minFreq) {
+            minFreq = it.second;
+            minEle = it.first;
+        }
+    }
+    
+ // Display results
+    cout << "Analysis Results:\n";
+    cout << "=================\n";
+    cout << "Highest frequency element: " << maxEle << " (appears " << maxFreq << " times)\n";
+    cout << "Lowest frequency element: " << minEle << " (appears " << minFreq << " times)\n\n";
     
     int q;
     cout << "\nEnter number of queries: ";
