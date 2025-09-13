@@ -23,7 +23,7 @@ int main(){
         cin>>a[i];
     }
     selection_sort(a,n);
-    cout<<"sorted array is :"<<endl;
+    cout<<"sorted array using selection sort is :"<<endl;
 
     for(int i=0;i<n;i++){
         cout<<a[i]<<" ";
