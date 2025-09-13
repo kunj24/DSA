@@ -2,14 +2,14 @@
 using namespace std;
 
 void insertion_sort(int arr[], int n){
-    for(int i = 1; i < n; i++) {  // ✅ Start from index 1
+    for(int i = 1; i < n; i++) {  
         int j = i;
-        while (j > 0 && arr[j-1] > arr[j]) {  // ✅ Fixed condition
+        while (j > 0 && arr[j-1] > arr[j]) {  
             int temp = arr[j-1];
             arr[j-1] = arr[j];
             arr[j] = temp;
             j--;
-        }  // ✅ Added missing closing brace
+        }  
     }
 }
 
@@ -24,8 +24,8 @@ int main(){
     }
 
     insertion_sort(arr, n);
-    cout << "Sorted array using insertion sort is:" << endl;  // ✅ Fixed message
-
+    
+    cout << "Sorted array using insertion sort is:" << endl;  
     for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }   
