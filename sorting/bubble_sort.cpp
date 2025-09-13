@@ -1,13 +1,18 @@
 #include<iostream>
 using namespace std;
 void bubble_sort(int arr[],int n){
-    for(int i=0;i<n-1;i++){             //Largest element goes to the end at each -> 
+    for(int i=0;i<n-1;i++){  
+        int isswap= 0;                 //Largest element goes to the end at each -> 
         for(int j=0;j<n-i-1;j++){      //-> itreationso ignore the last element so n-i-1
             if(arr[j]>arr[j+1]){        
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
+                isswap=1;
             }
+        }
+        if(isswap==0){
+            break;                      //loop break if alreay sorted 12345 o(n)
         }
     }
 }
