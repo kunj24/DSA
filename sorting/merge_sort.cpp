@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 void merge_sort(int arr[],int low,int high){
 
@@ -10,12 +11,33 @@ void merge_sort(int arr[],int low,int high){
 
 }
 void merge(int arr[],int low,int mid,int high){
-    int temp[100];
+    vector<int> temp;
     int left_pointer=low;
     int right_pointer=mid+1;
-    if(left_pointer<=right_pointer  ){
-
+    while (left_pointer<=mid && right_pointer<=high)
+    {   
+        if (left_pointer<right_pointer)
+        {
+            temp.push_back(arr[left_pointer]);
+            left_pointer++;
+        }
+        else{
+            temp.push_back(arr[right_pointer]);
+            right_pointer++;
+        }
+        
     }
+    while (left_pointer<=mid)
+    {
+        temp.push_back(arr[left_pointer]);
+        left_pointer++;
+    }
+    while (right_pointer<=high)
+    {
+        temp.push_back(arr[right_pointer]);
+        right_pointer++;
+    }
+    
 
 
 }
