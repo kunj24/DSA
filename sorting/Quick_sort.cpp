@@ -18,7 +18,7 @@ int partition(vector<int> &arr,int low,int high){
         if(i<j){
             swap(arr[i],arr[j]);      //if found without crossing then swap and continue where 
         }                             //you left if you crossing then exit end swap
-    }        //then elemnet from of pviot and j so our pviot element is in correct postion         
+    }        //then elemnet of pviot and j so our pviot element is in correct postion         
     swap(arr[low],arr[j]);
     return j;
 }    
