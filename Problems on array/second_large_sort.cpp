@@ -3,7 +3,7 @@
 #include<algorithm>  // Needed for sort();
 using namespace std;
 int sortArr(vector<int> &arr){
-    sort(arr.begin(),arr.end());            
+    sort(arr.begin(),arr.end());  //this only work when array last 2 element is unique
     return arr[arr.size()-2];
 
 }
