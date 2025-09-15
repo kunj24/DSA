@@ -20,7 +20,7 @@ int partition(vector<int> &arr,int low,int high){
         }                             //you left if you crossing then exit end swap
     }        //then elemnet of pviot and j so our pviot element is in correct postion         
     swap(arr[low],arr[j]);
-    return j;
+    return j;       //return the j element so we can divide the array via this point
 }    
 void quick_sort(vector <int> &arr,int low,int high){
     if(low<high){
