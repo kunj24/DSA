@@ -9,16 +9,16 @@ int partition(vector<int> &arr,int low,int high){
     {
         while (arr[i]<=pivot && i<=high-1)
         {
-            i++;
+            i++;            //find the grater element to the pviot from left
         }
         while (arr[j]>=pivot && j>=low+1)
         {
-            j--;
+            j--;            //find the small element to the pviot from right 
         }    
         if(i<j){
-            swap(arr[i],arr[j]);
-        }
-    }
+            swap(arr[i],arr[j]);      //if found without crossing then swap and continue where 
+        }                             //you left if you crossing then exit end swap
+    }        //then elemnet from of pviot and j so our pviot element is in correct postion         
     swap(arr[low],arr[j]);
     return j;
 }    
