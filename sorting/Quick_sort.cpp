@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void partiotion(vector<int> arr,int low,int high){
+int partition(vector<int> &arr,int low,int high){
     int pivot=arr[low];
     int i=low;
     int j=high;
@@ -13,7 +13,7 @@ void partiotion(vector<int> arr,int low,int high){
         }
         while (arr[j]>=pivot && j>=low+1)
         {
-            j++;
+            j--;
         }    
         if(i<j){
             swap(arr[i],arr[j]);
@@ -22,9 +22,9 @@ void partiotion(vector<int> arr,int low,int high){
     swap(arr[low],arr[j]);
     return j;
 }    
-void quick_sort(vector <int> arr[],int low,int high){
+void quick_sort(vector <int> &arr,int low,int high){
     if(low<high){
-        int pindex = partiotion(arr,low,high);
+        int pindex = partition(arr,low,high);
         quick_sort(arr,low,pindex);
         quick_sort(arr,pindex+1,high);
     }
@@ -34,7 +34,7 @@ int main(){
     int n;
     cout << "Enter number of elements: ";
     cin >> n;
-    int arr[n];
+    vector <int> arr(n);
     cout << "Enter numbers:" << endl;
     for(int i = 0; i < n; i++){
         cin >> arr[i];
@@ -42,7 +42,7 @@ int main(){
     
     quick_sort(arr, 0, n - 1);
     
-    cout << "Sorted array using merge sort is:" << endl;
+    cout << "Sorted array using quick sort is:" << endl;
     for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }    
