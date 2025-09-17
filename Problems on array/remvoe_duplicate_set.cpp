@@ -24,7 +24,7 @@ int main(){
     }
     
     int newSize = removeDuplicates(arr, n);
-    
+    cout<<endl;
     cout << "Number of unique elements: " << newSize << endl;
     
     return 0;
