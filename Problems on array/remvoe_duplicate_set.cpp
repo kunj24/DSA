@@ -4,8 +4,8 @@ using namespace std;
 int removeDuplicates(int arr[],int n){
     set<int> s;
     for(int i=0;i<n;i++){
-        s.insert(arr[i]);
-    }
+        s.insert(arr[i]);   //set is used for the removing the duplicate and store it
+    }                       //for more go to stl and then set
     cout << "Array after removing duplicates: ";
     for(auto it: s){
         cout<<it<<" ";
