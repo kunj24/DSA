@@ -10,9 +10,9 @@ void leftrotate(vector<int> &arr,int n){
     arr[n-1]=temp;
 }
 void leftrotateBYk(vector<int> &arr,int k,int n){
-    k=k%n;
-    for(int i=0;i<k;i++){
-        leftrotate(arr,n);
+    k=k%n;                    //arr is 1,2,3,4,5 then k=6 so arr is 23451 becz 
+    for(int i=0;i<k;i++){     //6= 5+1 so we just rotate 1 becz 5 roatate-> arr it self
+        leftrotate(arr,n);    // so k%n 6%5=1 2%5=2
     }
 }
 
