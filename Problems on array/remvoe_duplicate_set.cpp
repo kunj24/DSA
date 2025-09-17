@@ -10,6 +10,7 @@ int removeDuplicates(int arr[],int n){
     for(auto it: s){
         cout<<it<<" ";
     }
+    cout<<endl;
     return s.size();
 }
 int main(){
@@ -18,13 +19,13 @@ int main(){
     cin >> n;
     
     int arr[n];
-    cout << "Enter numbers (should be sorted and shold be duplicate):" << endl;
+    cout << "Enter numbers (shold be duplicate or sorted or unsorted):" << endl;
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
     
     int newSize = removeDuplicates(arr, n);
-    cout<<endl;
+
     cout << "Number of unique elements: " << newSize << endl;
     
     return 0;
