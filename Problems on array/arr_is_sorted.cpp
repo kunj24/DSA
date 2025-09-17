@@ -19,5 +19,10 @@ int main(){
     }
 
     issorted(arr,n);
+    if(issorted(arr, n)) {
+        cout << "The array is sorted " << endl;
+    } else {
+        cout << "The array is NOT sorted" << endl;
+    }
 
 }    
