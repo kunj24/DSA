@@ -27,6 +27,7 @@ int main(){
         cin >> arr[i];
     }
     int k;
+    cout << "Enter number of positions to rotate: ";
     cin>>k;
     
     leftrotateBYk(arr,k, n);
