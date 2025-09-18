@@ -11,11 +11,12 @@ void Reverse(int arr[],int start,int end){
     }
     
 }
-void RotateToLeft(int arr[],int n,int k){
-    Reverse(arr,0,k-1);
-    Reverse(arr,k,n-1);
-    Reverse(arr,0,n-1);
+void RotateToLeft(int arr[],int n,int k){ //1 2 3 4 5 k=2
+    Reverse(arr,0,k-1); // Reverse first k elements 2 1 3 4 5
+    Reverse(arr,k,n-1); // Reverse remaining elements 2 1 5 4 3
+    Reverse(arr,0,n-1); // Reverse entire array 3 4 5 1 2 (answere)
 }
+
 int main() {
     int n;
     cout << "Enter number of elements: ";
