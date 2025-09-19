@@ -5,11 +5,11 @@ void movezero(vector<int>& arr, int n){
     int j = 0; // Position for next non-zero element
     
     for(int i = 0; i < n; i++){
-        if(arr[i] != 0){
-            swap(arr[i], arr[j]);
-            j++;
-        }
-    }
+        if(arr[i] != 0){       //1,2,0,0,3
+            swap(arr[i], arr[j]);  // then i=0,j=0 swap i=1,j=1 swap
+            j++;    // i=2 it come 0 so i++ again same so i++
+        }   // now i=4 j=2 so swap 0 adn 3
+    }   //1,2,3,0,0
 }
 int main(){
     int n;
