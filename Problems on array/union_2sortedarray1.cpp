@@ -7,10 +7,17 @@ vector<int> union_arr(vector<int>& arr1,vector<int>& arr2){
     int b=arr2.size();  //2 3 4 4 5 6
 
     vector<int> unionarr;
-    
+    set<int> s;
     for(int i=0;i<a;i++){
-
+        s.insert(arr1[i]);
     }
+    for(int i=0;i<b;i++){
+        s.insert(arr2[i]);
+    }
+    for(auto it: s){
+        unionarr.push_back(it);
+    }
+
     return unionarr; 
 }
 int main(){
