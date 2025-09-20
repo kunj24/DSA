@@ -3,21 +3,21 @@
 #include<vector>
 using namespace std;
 vector<int> union_arr(vector<int>& arr1,vector<int>& arr2){
-    int a=arr1.size();
-    int b=arr2.size();
+    int a=arr1.size();  //1 1 2 3 4 5
+    int b=arr2.size();  //2 3 4 4 5 6
     int i=0;
     int j=0;
     vector<int> unionarr;
     while (i<a && j<b)
-    {
-        if(arr1[i]<=arr2[j]){
-            if(unionarr.size()==0 ||
-                unionarr.back()!=arr1[i]){
-                    unionarr.push_back(arr1[i]);
-            }
+    {           
+        if(arr1[i]<=arr2[j]){   //1<2
+            if(unionarr.size()==0 ||  //first time so push the 1
+                unionarr.back()!=arr1[i]){ // then i++ 1<2 push the 1 but 
+                    unionarr.push_back(arr1[i]); //it has already 1 so check the .back!=arr[i]
+            }               //if yes then i++ 2<2 .back!=a[i] 1!=2 push the 2 i++
             i++;    
         }
-        else{
+        else{       //3>2 so insert 2 but there is alreay 2 so j++ same process
             if(unionarr.size()==0 ||
                 unionarr.back()!=arr2[j]){
                 unionarr.push_back(arr2[j]);
@@ -25,8 +25,8 @@ vector<int> union_arr(vector<int>& arr1,vector<int>& arr2){
             j++;
         }
     }
-    while (j<b)
-    {
+    while (j<b) // 1 2  //3 4 5 there is two array if one array os ending then 
+    {           //insert all element of array 2 same for array 1
         if(unionarr.size()==0 ||
             unionarr.back()!=arr2[j]){
             unionarr.push_back(arr2[j]);
