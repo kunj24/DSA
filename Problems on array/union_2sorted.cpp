@@ -56,12 +56,17 @@ int main(){
     cin >> m;
     vector<int>arr2(m);
     cout << "Enter numbers (shold be sorted ):" << endl;
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < m; i++){
         cin >> arr2[i];
     }
     
-    union_arr(arr1,arr2);
-
+    vector<int> result = union_arr(arr1, arr2);  
+    
+    cout << "Union of arrays: ";  
+    for(int num : result) {
+        cout << num << " ";
+    }
+    cout << endl;
     
     return 0;
 }
