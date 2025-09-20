@@ -46,7 +46,7 @@ int main(){
     
     vector<int> result = intersection_arr(arr1, arr2);  
     
-    cout << "Inersection of arrays: ";  
+    cout << "Inersection of arrays with more than one duplicate is : ";  
     for(int num : result) {
         cout << num << " ";
     }
