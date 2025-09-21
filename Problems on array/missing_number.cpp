@@ -19,11 +19,11 @@ int missing_num(vector<int>& arr, int n){
 
 int main(){
     int n;
-    cout << "Enter the maximum number (n): ";
+    cout << "Enter the maximum number n: ";
     cin >> n;
     vector<int> arr(n - 1); // Array should have n-1 elements
     
-    cout << "Enter " << n - 1 << " numbers from 1 to " << n << ":" << endl;
+    cout << "Enter " << n - 1 << " numbers from 1 to " << n << "in sequence :" << endl;
     for(int i = 0; i < n - 1; i++){
         cin >> arr[i];
     }
