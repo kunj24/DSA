@@ -3,7 +3,7 @@
 using namespace std;
 int missing_num(vector<int>& arr, int n){
     int totalsum=0;
-    for(int i=0;i<n-1;i++){
+    for(int i=0;i<n-1;i++){ //currently array has n-1 element
         totalsum+=arr[i];
     }
     int arrsum= ((n)*(n+1))/2;
