@@ -6,7 +6,7 @@ int missing_num(vector<int>& arr, int n){
     for(int i=0;i<n-1;i++){ //currently array has n-1 element
         totalsum+=arr[i];
     }
-    int arrsum= ((n)*(n+1))/2;
+    int arrsum= ((n)*(n+1))/2;  //this n get from the cin>>n;
     return arrsum-totalsum;
 
 }
