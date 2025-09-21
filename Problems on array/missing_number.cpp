@@ -23,7 +23,7 @@ int main(){
     cin >> n;
     vector<int> arr(n - 1); // Array should have n-1 elements
     
-    cout << "Enter " << n - 1 << " numbers from 1 to " << n << "in sequence :" << endl;
+    cout << "Enter " << n - 1 << " numbers from 1 to " << n << " in sequence :" << endl;
     for(int i = 0; i < n - 1; i++){
         cin >> arr[i];
     }
