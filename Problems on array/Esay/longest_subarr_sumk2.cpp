@@ -1,12 +1,12 @@
 #include<iostream>
 #include<vector>
-#include<unordered_map>
+#include<map>
 using namespace std;
 
                     // check the example after the main function 
 
 int longest_subarray_sum_k(vector<int>& arr, int n, long long k) {
-    unordered_map<long long, int> prefix_sum; // Stores prefix_sum -> index
+    map<long long, int> prefix_sum; // Stores prefix_sum -> index
     long long current_sum = 0;          // 2 1 0 0 3 k=3 ans is =4
     int max_length = 0;
     
