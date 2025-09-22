@@ -5,16 +5,16 @@ using namespace std;
 
 int longest_subarray_sum_k(vector<int>& arr, int n, long long k) {
     unordered_map<long long, int> prefix_sum; // Stores prefix_sum -> index
-    long long current_sum = 0;
+    long long current_sum = 0;          // 2 1 0 0 3 k=3 ans is =4
     int max_length = 0;
     
     for(int i = 0; i < n; i++) {
         // Step 1: Add current element to the running sum
-        current_sum += arr[i];
-        
+        current_sum += arr[i];  // for i=0 s=2,i=1 s=3 
+
         // Step 2: If current sum equals k, entire subarray from start to i is valid
         if(current_sum == k) {
-            max_length = i + 1; // Length = index + 1
+            max_length = i + 1; // Length = index + 1   //max=2 for i=1
         }
         
         // Step 3: Check if we've seen (current_sum - k) before
