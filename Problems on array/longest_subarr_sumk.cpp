@@ -7,11 +7,12 @@ int longest_subarr_sumofk(vector<int>& arr, int n,int k){
     for(int i=0;i<n;i++){
         for(int j=i;j<n;j++){
             int s=0;
-            for(int x=i;x<j;x++){
-                s+=arr[x];
+            for(int x = i; x <= j; x++){  
+                s += arr[x];
             }
-            if(s==k) len=max(len,j-i+1);
-
+            if(s == k) {
+                len = max(len, j - i + 1);
+            }
         }
     }
     return len;
