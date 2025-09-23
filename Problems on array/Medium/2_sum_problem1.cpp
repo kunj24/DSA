@@ -9,9 +9,9 @@ vector<int> twoSum(int arr[], int n, int k){
     
     for(int i = 0; i < n; i++){
         int current = arr[i];   //current = arr[0] = 2 needed = k - current = 9 - 2 = 7
-        int needed = k - current;   //for i=2 current =2 and need =7 
+        int needed = k - current;   //for i=2 current =7 and need =2 
         //mpp.find(7) != mpp.end() → False (7 not in map yet)So condition fails, skip the if-block
-        if(mpp.find(needed) != mpp.end()){//for i=1 mpp.find
+        if(mpp.find(needed) != mpp.end()){//for i=1 mpp.find(2) and it is true so push in the vector and return
             // Found the pair - return indices
             ans.push_back(mpp[needed]); // index of the needed number
             ans.push_back(i);           // current index
