@@ -29,5 +29,10 @@ int main(){
         cin>>arr[i];
     }
     vector<int> val = sort(arr, n);
-
+    
+    cout << "Sorted array: ";
+    for(int num : val){
+        cout << num << " ";
+    }
+    cout << endl;
 }    
