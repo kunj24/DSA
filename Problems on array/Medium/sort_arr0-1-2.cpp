@@ -10,10 +10,17 @@ vector<int> sort(int arr[],int n){
     for(int i=0;i<n;i++){
             hash[arr[i]]++;
     }
-    for(int i = 0; i < 3; i++){ // For values 0,1,2
-        for(int j = 0; j < hash[i]; j++){
-            result.push_back(i);
-        }
+    // Add 0s
+    for(int i = 0; i < hash[0]; i++){
+        result.push_back(0);
+    }
+    // Add 1s
+    for(int i = 0; i < hash[1]; i++){
+        result.push_back(1);
+    }
+    // Add 2s
+    for(int i = 0; i < hash[2]; i++){
+        result.push_back(2);
     }
     return result;
 }
