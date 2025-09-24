@@ -7,9 +7,6 @@ vector<int> sort(int arr[],int n){
     for(int i=0;i<n;i++){
         hash[arr[i]]++;
     }
-    for(int i=0;i<n;i++){
-            hash[arr[i]]++;
-    }
     // Add 0s
     for(int i = 0; i < hash[0]; i++){
         result.push_back(0);
