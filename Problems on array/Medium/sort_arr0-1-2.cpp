@@ -8,9 +8,7 @@ vector<int> sort(int arr[],int n){
         hash[arr[i]]++;
     }
     for(int i=0;i<n;i++){
-        if(arr[i] >= 0 && arr[i] <= 2){
             hash[arr[i]]++;
-        }
     }
     for(int i = 0; i < 3; i++){ // For values 0,1,2
         for(int j = 0; j < hash[i]; j++){
