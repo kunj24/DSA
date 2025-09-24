@@ -7,7 +7,7 @@ vector<int> sort(int arr[],int n){
     for(int i=0;i<n;i++){
         hash[arr[i]]++;
     }
-    for(int i=0;i<hash[0];i++){
+    for(int i=0;i<n;i++){
         if(arr[i] >= 0 && arr[i] <= 2){
             hash[arr[i]]++;
         }
