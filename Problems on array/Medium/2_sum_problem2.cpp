@@ -4,20 +4,25 @@
 #include<algorithm>
 using namespace std;
 
+void sort(vector<int>& arr){
+    sort(arr.begin(), arr.end());
+}
+
 vector<int> twoSum(int arr[], int n, int k){
     int i=0;
-    int j=n;
+    int j=n-1;
     vector<int> result;
 
     while(i<j){
         if(arr[i]+arr[j]==k){
             result.push_back(i);
             result.push_back(j);
+            return result;
         }
-        if(arr[i]+arr[j]>k){
+        else if(arr[i]+arr[j]>k){
             j--;
         }
-        if(arr[i]+arr[j]<k){
+        else{
             i++;
         }
     }
@@ -28,8 +33,7 @@ int main(){
     int n, k;
     cout << "Enter number of elements: ";
     cin >> n;
-    
-    // Use vector instead of variable-length array
+
     vector<int> arr(n);
     
     cout << "Enter numbers: " << endl;
@@ -39,13 +43,21 @@ int main(){
     
     cout << "Enter target sum: ";
     cin >> k;
-    sort(arr.begin(), arr.end());
+
+    vector<int> original_arr = arr;
+    sort(arr);
 
     vector<int> result = twoSum(arr.data(), n, k);
     
     if (!result.empty()) {
         cout << "Indices: " << result[0] << " " << result[1] << endl;
         cout << "Values: " << arr[result[0]] << " + " << arr[result[1]] << " = " << k << endl;
+        cout << "Original array: ";
+        for(int num : original_arr) cout << num << " ";
+        cout << endl;
+        cout << "Sorted array:   ";
+        for(int num : arr) cout << num << " ";
+        cout << endl;
     } else {
         cout << "No such pair found." << endl;
     }
