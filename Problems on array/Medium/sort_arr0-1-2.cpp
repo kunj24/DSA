@@ -36,5 +36,6 @@ int main(){
     for(int num : val){
         cout << num << " ";
     }
+    
     cout << endl;
 }    
