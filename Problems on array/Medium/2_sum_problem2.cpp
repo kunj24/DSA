@@ -58,7 +58,8 @@ int main(){
         cout << "Sorted array:   ";
         for(int num : arr) cout << num << " ";
         cout << endl;
-    } else {
+    } 
+    else {
         cout << "No such pair found." << endl;
     }
     
