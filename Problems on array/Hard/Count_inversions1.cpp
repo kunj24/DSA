@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 // Function to merge two halves and count inversions
 int merge(vector<int> &arr, int low, int mid, int high) {
     // Temporary array to store merged elements
