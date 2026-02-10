@@ -27,6 +27,7 @@ public:
             // Otherwise, move to the left half
             else
                 high = mid - 1;
+            
         }
 
         // Return false if target not found
