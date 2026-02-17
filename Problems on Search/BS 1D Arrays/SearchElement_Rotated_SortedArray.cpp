@@ -3,31 +3,36 @@
 using namespace std;
 
 // Search element in a rotated sorted array
-int searchRotatedSortedArray(const vector<int>& arr, int target) {
-    int low = 0, high = arr.size() - 1;
+int searchRotatedSortedArray(const vector<int>& nums, int target) {
+        int low = 0;
+        int high = nums.size() - 1;
 
-    while (low <= high) {
-        int mid = (low + high) / 2;
+        while (low <= high) {
+            int mid = low + (high - low) / 2; // Prevents overflow
 
-        if (arr[mid] == target)
-            return mid;
+            if (nums[mid] == target) return mid;
 
-        // Left half is sorted
-        if (arr[low] <= arr[mid]) {
-            if (arr[low] <= target && target < arr[mid])
-                high = mid - 1;
-            else
-                low = mid + 1;
+            // Step 1: Identify which half is sorted
+            if (nums[low] <= nums[mid]) { 
+                // Left half is sorted
+                // Step 2: Check if target is within this sorted range
+                if (target >= nums[low] && target < nums[mid]) {
+                    high = mid - 1; // Target is in the left
+                } else {
+                    low = mid + 1;  // Target is in the right
+                }
+            } 
+            else { 
+                // Right half is sorted
+                // Step 2: Check if target is within this sorted range
+                if (target > nums[mid] && target <= nums[high]) {
+                    low = mid + 1;  // Target is in the right
+                } else {
+                    high = mid - 1; // Target is in the left
+                }
+            }
         }
-        // Right half is sorted
-        else {
-            if (arr[mid] < target && target <= arr[high])
-                low = mid + 1;
-            else
-                high = mid - 1;
-        }
-    }
-    return -1;
+        return -1;
 }
 
 int main() {
@@ -53,6 +58,43 @@ int main() {
 
     return 0;
 }
+
+
+// class Solution {
+// public:
+//     int search(vector<int>& nums, int target) {
+//         int low = 0;
+//         int high = nums.size() - 1;
+
+//         while (low <= high) {
+//             int mid = low + (high - low) / 2; // Prevents overflow
+
+//             if (nums[mid] == target) return mid;
+
+//             // Step 1: Identify which half is sorted
+//             if (nums[low] <= nums[mid]) { 
+//                 // Left half is sorted
+//                 // Step 2: Check if target is within this sorted range
+//                 if (target >= nums[low] && target < nums[mid]) {
+//                     high = mid - 1; // Target is in the left
+//                 } else {
+//                     low = mid + 1;  // Target is in the right
+//                 }
+//             } 
+//             else { 
+//                 // Right half is sorted
+//                 // Step 2: Check if target is within this sorted range
+//                 if (target > nums[mid] && target <= nums[high]) {
+//                     low = mid + 1;  // Target is in the right
+//                 } else {
+//                     high = mid - 1; // Target is in the left
+//                 }
+//             }
+//         }
+//         return -1;
+//     }
+// };
+
 
 // ======================= ADDITIONAL EXPLANATION =======================
 //
