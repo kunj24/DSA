@@ -20,3 +20,7 @@ Thumbs.db
 
 # Ignore logs
 *.log
+
+# Ignore Java code in 1D Linked List folder (user requested)
+Linked List/1D Linked List/Java code/
+Linked List/1D Linked List/tempCodeRunnerFile.cpp
